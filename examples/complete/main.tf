@@ -53,12 +53,14 @@ variable "google_client_id" {
   description = "Google OAuth 2.0 client ID from Google Cloud Console"
   type        = string
   sensitive   = true
+  default     = "dummy-client-id-for-testing"
 }
 
 variable "google_client_secret" {
   description = "Google OAuth 2.0 client secret from Google Cloud Console"
   type        = string
   sensitive   = true
+  default     = "dummy-client-secret-for-testing"
 }
 
 # Outputs
@@ -88,7 +90,7 @@ output "logout_url" {
 }
 
 # Example: How to reference this module in your deployment
-# 
+#
 # In your h3ow3d-deployment repository main.tf:
 #
 # module "cognito" {
